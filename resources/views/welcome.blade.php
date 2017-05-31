@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="http://emojis.slackmojis.com/emojis/images/1450380010/150/dickbutt.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="http://emojis.slackmojis.com/emojis/images/1450380010/150/dickbutt.png">
 
-        <title>See if it works!</title>
+        <title>ChitChat</title>
 
 
         <!-- Fonts -->
@@ -14,12 +16,19 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #7f7f7f;
+                color: #999;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
+                width: 100vw;
                 margin: 0;
+            }
+
+            body{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
             }
 
             .full-height {
@@ -65,9 +74,31 @@
             }
             ul{
               list-style-type: none;
+              width: 80vw;
             }
             li:nth-child(even){
-              background: grey;
+              background: #59afaf;
+              color: white;
+            }
+            form{
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+            }
+            form input{
+              height: 3em;
+              border-radius: 5px;
+              width: 100%;
+            }
+            form button{
+              position: fixed;
+              bottom: 0;
+              right: 0;
+              height: 3.5em;
+              background: #59afaf;
+              border: 2px solid;
+              border-radius: 3px;
               color: white;
             }
         </style>
@@ -75,18 +106,16 @@
     <body>
 
       <h1>chitchat</h1>
-
-      <form v-on:submit.prevent="send">
-        <input v-model="message">
-        <button type="submit" name="button">Submit</button>
-      </form>
-
       <ul>
         <li v-for="dude in dudes">
-          <b>@{{ dude }}</b>
+            <b>@{{ dude }}</b>
         </li>
       </ul>
 
+            <form v-on:submit.prevent="send">
+              <input v-model="message">
+              <button type="submit" name="button">SEND</button>
+            </form>
 
               <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
               <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.slim.js"></script>
