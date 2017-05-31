@@ -27,8 +27,16 @@
   <body>
 
 
-
 <script type="text/javascript">
+// navigator.geolocation.getCurrentPosition(function(position){
+//   console.log(position.coords.latitude+ ' and ' +position.coords.longitude)
+// })
+
+// $.post( "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCJduVob8ySqred2PKCOxzmWOpUnOtaa54", function(success) {
+//         console.log(success.location.lat)
+//         console.log(success.location.lng)
+//   })
+
 $('body').append('<canvas id="canvas" autofocus></canvas>')
 var canvas = document.getElementById("canvas");
 var count = 0;

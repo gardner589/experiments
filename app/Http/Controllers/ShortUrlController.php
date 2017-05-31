@@ -10,11 +10,18 @@ class ShortUrlController extends Controller
 {
     //
     public function redisbro(){
-      Redis::set('balls', 'this is a thing');
+      $data = [
+        'event' => 'somethingHappened',
+        'data' => [
+          'username' => 'Chris Gardner'
+        ]
+      ];
 
-      return Redis::get('balls');
+      Redis::publish('first-channel', json_encode($data));
+
+      return view('welcome');
     }
-    
+
     public function short(){
       return view('short.main');
     }
@@ -24,6 +31,7 @@ class ShortUrlController extends Controller
     }
 
     public function shorter(Request $request){
+      // dd($request->ips());
       $url = new ShortUrl;
       $url->long = $request->url;
       $url->ip_addr = $request->ip();

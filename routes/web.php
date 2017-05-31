@@ -12,7 +12,7 @@ use App\ShortUrl;
 |
 */
 
-Route::get('/athing', 'ShortUrlController@redisbro');
+Route::get('/chitchat', 'ShortUrlController@redisbro');
 Route::get('/', 'ShortUrlController@short');
 Route::post('/shorter', 'ShortUrlController@shorter');
 Route::get('/allurls', 'ShortUrlController@alladem');

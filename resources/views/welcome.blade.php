@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>See if it works!</title>
+
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -62,31 +63,64 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            ul{
+              list-style-type: none;
+            }
+            li:nth-child(even){
+              background: grey;
+              color: white;
+            }
         </style>
     </head>
     <body>
-      
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
-                </div>
-            @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+      <h1>chitchat</h1>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
+      <form v-on:submit.prevent="send">
+        <input v-model="message">
+        <button type="submit" name="button">Submit</button>
+      </form>
+
+      <ul>
+        <li v-for="dude in dudes">
+          <b>@{{ dude }}</b>
+        </li>
+      </ul>
+
+
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.slim.js"></script>
+
+        <script>
+        var socket = io.connect('http://34.197.151.194:3000');
+
+          new Vue({
+            el: 'body',
+
+            data: {
+              dudes: [],
+              message: ''
+            },
+
+            ready: function(){
+              socket.on('first-channel:somethingHappened', function(data){
+                // console.log(data);
+                // this.dudes.push(data.username);
+              }.bind(this));
+
+              socket.on('new.msg', function(msg){
+                this.dudes.push(msg)
+              }.bind(this));
+            },
+            methods: {
+              send: function(e){
+                socket.emit('test.thing', this.message)
+                this.message = '';
+                e.preventDefault()
+              }
+            }
+
+          })
+        </script>
     </body>
 </html>
