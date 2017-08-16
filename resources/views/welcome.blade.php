@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="icon" href="http://emojis.slackmojis.com/emojis/images/1450380010/150/dickbutt.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <link rel="shortcut icon" href="http://emojis.slackmojis.com/emojis/images/1450380010/150/dickbutt.png">
 
         <title>ChitChat</title>

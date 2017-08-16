@@ -14,7 +14,6 @@
             position: fixed;
             top: 0;
             left:  0;
-            /*z-index: 9999999999;*/
           }
           html, body{
             overflow: hidden;
@@ -28,28 +27,20 @@
 
 
 <script type="text/javascript">
-// navigator.geolocation.getCurrentPosition(function(position){
-//   console.log(position.coords.latitude+ ' and ' +position.coords.longitude)
-// })
 
-// $.post( "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCJduVob8ySqred2PKCOxzmWOpUnOtaa54", function(success) {
-//         console.log(success.location.lat)
-//         console.log(success.location.lng)
-//   })
-
-$('body').append('<canvas id="canvas" autofocus></canvas>')
+$('body').append('<canvas id="canvas" autofocus></canvas>');
 var canvas = document.getElementById("canvas");
 var count = 0;
 function testerino (processing){
   processing.size(window.innerWidth - 10, window.innerHeight- 15);
-  processing.background(200,200,200)
+  processing.background(0,0,0)
 
   var count = 80;
 $(document).on('vmousemove', function(evt){
   evt.preventDefault()
 
-    if (count > 250) {
-      count = 75;
+    if (count > 260) {
+      count = 80;
     }
     count ++;
     var mouse  = new PVector(evt.pageX, evt.pageY);
@@ -58,26 +49,23 @@ $(document).on('vmousemove', function(evt){
 
     processing.resetMatrix();
     processing.translate(processing.width/2, processing.height/2);
-    processing.strokeWeight(2);
+    processing.strokeWeight(.75);
+    processing.stroke('silver');
 
-    processing.stroke(0, count, 150);
-    processing.fill(count, 0, mouse.y);
-    processing.ellipse(mouse.x,mouse.y, 30,30);
+    var phi = Math.atan2(mouse.y, mouse.x);
+    var rad=Math.sqrt(Math.pow(mouse.x,2)+Math.pow(mouse.y,2))
 
-    processing.stroke(0, count, 150);
-    processing.fill(0, 0, mouse.x*count);
-    processing.ellipse(mouse.y,mouse.x, 30,30);
+    processing.fill(count, 25 ,rad*count);
 
-    processing.stroke(0, count, 150);
-    processing.fill(mouse.x,0, count);
-    processing.ellipse(mouse.x*-1,mouse.y*-1, 30,30);
+    for (var i=0;i<10;i++) {
+  		phi+=Math.PI*2/10;
+  		processing.ellipse(rad*Math.cos(phi),rad*Math.sin(phi), 22, 22);
+  	}
 
-    processing.stroke(0, count, 150);
-    processing.fill(0, count*mouse.y, 0);
-    processing.ellipse(mouse.y*-1,mouse.x*-1, 30,30);
   });
 };
 var processingInstance = new Processing(canvas, testerino);
+
 </script>
   </body>
 </html>

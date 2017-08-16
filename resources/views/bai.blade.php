@@ -40,7 +40,8 @@
       // console.log('play now');
       widget.play()
     })
-// 
+    document.getElementsByClassName('clearfix session-info active-session-slug').style = 'perspective(800px) rotate('+c+'deg)';
+//
 // var c = 0;
 // $('.clearfix.session-info').css('background', 'url(https://media.giphy.com/media/14hS1ZEmSfKdTW/giphy.gif) 100% center')
 // $('.dropdown').css('z-index', '500')
@@ -73,9 +74,9 @@
 // }, 50)
 //
 //
+// $('.member_preview_link').css('transform', 'perspective(600px) rotate('+e.pageX+'deg)')
 // $(document).mousemove(function(e){
-//   // $('.clearfix.session-info.active-session-slug').css('transform', 'perspective(600px) rotateY('+e.pageX+'deg)')
-//   $('.member_preview_link').css('transform', 'perspective(600px) rotate('+e.pageX+'deg)')
+//     $('.clearfix.session-info.active-session-slug').css('transform', 'perspective(600px) rotateY('+e.pageX+'deg)')
 // })
     </script>
   </body>
