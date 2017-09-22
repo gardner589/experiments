@@ -1,9 +1,12 @@
 # This is my Laravel thingy
 
-[![URL Shortener](https://www.blairanderson.co/react-no-redux/static/media/logo.5d5d9eef.svg)](http://shirc.pro)
-[![Symmetry](https://www.blairanderson.co/react-no-redux/static/media/logo.5d5d9eef.svg)](http://shirc.pro/symdraw)
-[![London](https://www.blairanderson.co/react-no-redux/static/media/logo.5d5d9eef.svg)](http://shirc.pro/london)
-[![N.Y.C](https://www.blairanderson.co/react-no-redux/static/media/logo.5d5d9eef.svg)](http://shirc.pro/nyc)
+[URL Shortener](http://shirc.pro)
+[Symmetry](http://shirc.pro/symdraw) _Works in Chrome so far_
+
+###Music and fun stuffs
+[London](http://shirc.pro/london)
+[N.Y.C](http://shirc.pro/nyc)
+[J. Dilla](http://shirc.pro/dilla)
 
 
 ## Official Documentation
