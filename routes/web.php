@@ -95,11 +95,8 @@ Route::get('/vidzs',function(){
 
 Route::get('/vids',function(){
   $ch = curl_init();
-  // set url
   curl_setopt($ch, CURLOPT_URL, "http://a1.phobos.apple.com/us/r1000/000/Features/atv/AutumnResources/videos/entries.json");
-  //return the transfer as a string
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-  // $output contains the output string
   $output = curl_exec($ch);
   $output = json_decode($output, true);
   $stuffs = [];

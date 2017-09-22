@@ -3,13 +3,13 @@
   <head>
     <?php
   $gif = [
-     '1' => 'https://68.media.tumblr.com/3b9427ad8ba6006f461fcd8b91cc6080/tumblr_obc8k4v3l01rctpomo1_400.gif',
-     '2' => 'http://data.whicdn.com/images/64940340/original.gif' ,
-     '3' => 'https://media.giphy.com/media/14hS1ZEmSfKdTW/giphy.gif' ,
-     '4' => 'https://media.giphy.com/media/10bbPvzEG1NZWU/giphy.gif' ,
-     '5' => 'https://media.giphy.com/media/fRZn2vraBGiA0/giphy.gif' ,
-     '6' => 'https://media.giphy.com/media/yhScPwKdCTuZW/giphy.gif' ,
-     '7' => 'https://media.giphy.com/media/IKy3MWMTUoX4Y/giphy.gif'
+    '0' => 'https://media.giphy.com/media/10bbPvzEG1NZWU/giphy.gif' ,
+    '1' => 'http://data.whicdn.com/images/64940340/original.gif' ,
+    '2' => 'https://media.giphy.com/media/14hS1ZEmSfKdTW/giphy.gif' ,
+    '3' => 'https://68.media.tumblr.com/3b9427ad8ba6006f461fcd8b91cc6080/tumblr_obc8k4v3l01rctpomo1_400.gif',
+    '6' => 'https://media.giphy.com/media/fRZn2vraBGiA0/giphy.gif' ,
+    '5' => 'https://media.giphy.com/media/yhScPwKdCTuZW/giphy.gif' ,
+    '4' => 'https://media.giphy.com/media/IKy3MWMTUoX4Y/giphy.gif'
     ];
 ?>
     <meta charset="utf-8">

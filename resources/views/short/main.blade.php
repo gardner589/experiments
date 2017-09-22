@@ -72,22 +72,6 @@
             $('h3').css('transform','perspective(600px) rotateY('+($newVal*7)+'deg)')
           }
         })
-      var coochList = []; // creates an empty array for cooch to be added to
-      function lineUp(chick){
-        if (chick.willTopMe && !chick.busted) { //check if current chick is busted and will she top me
-          coochList.push(chick) //since current chick is not busted and will indeed top me off, current chick is now in list of cooch
-        }else{
-          return "Either she wasn't gonna top or she was lookin busted AF"
-        }
-        return coochList;  //returns the current list of cooch
-      }
-      // Example use
-      var erika = {}; // create a new object called erika
-      erika.willTopMe = true; //erika will top me off
-      erika.busted = false; // erika is not busted (but she a thot)
-
-      lineUp(erika); //runs function on erika to see if she is in the "coochList"
-
     </script>
   </body>
 </html>

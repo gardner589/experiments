@@ -46,7 +46,7 @@ class ShortUrlController extends Controller
 
       if ($url == null) {
 
-        return view('working');
+        return view('not_found');
 
       } elseif (starts_with($url->long, 'http') || starts_with($url->long, 'www')) {
 
