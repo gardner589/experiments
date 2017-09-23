@@ -1,9 +1,10 @@
 # This is my Laravel thingy
 
 [URL Shortener](http://shirc.pro)
+
 [Symmetry](http://shirc.pro/symdraw) _Works in Chrome so far_
 
-###Music and fun stuffs
+##Music and fun stuffs
 [London](http://shirc.pro/london)
 [N.Y.C](http://shirc.pro/nyc)
 [J. Dilla](http://shirc.pro/dilla)
